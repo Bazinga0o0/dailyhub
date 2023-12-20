@@ -3,11 +3,11 @@ import { View, StyleSheet, Text, Modal, TouchableOpacity, TextInput, ScrollView 
 import { Calendar } from 'react-native-calendars';
 //import NewsModal from './src/News';
 //import ChatModal from './src/chat';
-//import HabitTracker from "./src/HabitTracker/HabitTracker";
+import HabitTracker from "./src/HabitTracker/HabitTracker";
 import MenuModal from './src/menu';
-//import TodoListModal from './src/TodoList/TodoList';
+import TodoListModal from './src/TodoList/TodoList';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-//import DayPlannerModal from './src/dayplanner';
+import DayPlannerModal from './src/dayplanner';
 
 
 const getMarkedDates = async () => {
@@ -34,7 +34,6 @@ const Start = () => {
   const [eventName, setEventName] = useState('');
   const [eventTime, setEventTime] = useState('');
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const [selectedValue, setSelectedValue] = useState(null);
 
   useEffect(() => {
     getMarkedDates().then((result) => {
@@ -226,12 +225,12 @@ const Start = () => {
         }}
       > 
       <View style={{ width: '50%' }}>
-        {//<TodoListModal />
-}
+        <TodoListModal />
+
       </View>
       <View style={{ width: '50%' }}>
-        {//<HabitTracker /> 
-}
+        <HabitTracker /> 
+
       </View>
       </View>
       
@@ -248,8 +247,8 @@ const Start = () => {
         
       </View>
       <View style={{ width: '50%' }}>
-        {//<DayPlannerModal />
-}
+        <DayPlannerModal />
+
       </View>
       </View>
       
