@@ -4,7 +4,7 @@ import { Calendar } from 'react-native-calendars';
 //import NewsModal from './src/News';
 //import ChatModal from './src/chat';
 //import HabitTracker from "./src/HabitTracker/HabitTracker";
-//import MenuModal from './src/menu';
+import MenuModal from './src/menu';
 //import TodoListModal from './src/TodoList/TodoList';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 //import DayPlannerModal from './src/dayplanner';
@@ -147,8 +147,7 @@ const Start = () => {
           left: '3%',
         }}
       >
-        {//<MenuModal />
-}
+        <MenuModal />
       </View>
       <View
         style={{
